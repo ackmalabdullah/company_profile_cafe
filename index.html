@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kopi PAKU – Kedai kopi & ruang kerja santai di Malang</title>
+  <meta name="description"
+    content="Kopi PAKU: kopi susu, menu makan ringan, WiFi kencang, dan tempat nyaman untuk nugas. Lihat menu, jam buka, dan reservasi via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/photo.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/marquee.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/history.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/promo.css">
+  <link rel="stylesheet" href="css/testimonials.css">
+  <link rel="stylesheet" href="css/reservation-contact.css">
+  <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">Kopi<i>.</i>PAKU</a>
+      <button class="burger" id="bg" aria-label="Buka menu">☰</button>
+      <ul id="nv">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cerita">Cerita</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#promo">Promo</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a class="btn" href="#reservasi">Reservasi</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="slider" id="hs">
+        <div class="track">
+          <div class="slide">
+            <div class="tx"><span class="badge" id="bd"><b></b><em style="font-style:normal">Memeriksa jam
+                  buka…</em></span>
+              <h1>Ngopi pelan-pelan, kerja jalan terus.</h1>
+              <p>Kopi susu andalan, WiFi kencang, dan meja luas untuk nugas atau rapat kecil.</p>
+              <div><a class="btn" style="background:var(--acc);border-color:var(--acc);color:var(--ink)"
+                  href="#menu">Lihat menu</a> <a class="btn o" href="#kontak">Petunjuk arah</a></div>
+            </div>
+            <img class="bg" src="images/hero1.jpg" alt="Suasana ruang dalam PAKU Kopi">
+          </div>
+          <div class="slide">
+            <div class="tx"><span class="badge">Best seller</span>
+              <h1>Es Kopi PAKU, 22 ribu saja.</h1>
+              <p>Espresso biji lokal Malang, susu segar, gula aren. Dibuat satu per satu.</p>
+              <div><a class="btn" style="background:var(--acc);border-color:var(--acc);color:var(--ink)"
+                  href="#menu">Pesan sekarang</a></div>
+            </div>
+            <img class="bg" src="images/hero2.jpg" alt="Suasana ruang dalam PAKU Kopi">
+          </div>
+          <div class="slide">
+            <div class="tx"><span class="badge">Sabtu malam</span>
+              <h1>Live akustik tiap Sabtu, mulai 19.00.</h1>
+              <p>Datang bareng teman, amankan meja lebih dulu lewat WhatsApp.</p>
+              <div><a class="btn" style="background:var(--acc);border-color:var(--acc);color:var(--ink)"
+                  href="#reservasi">Reservasi meja</a></div>
+            </div>
+            <img class="bg" src="images/hero3.jpg" alt="Suasana ruang dalam PAKU Kopi">
+          </div>
+        </div>
+        <div class="ctrl"><button id="pv" aria-label="Sebelumnya">←</button><button id="nx"
+            aria-label="Berikutnya">→</button>
+          <div class="dots" id="dt"></div>
+        </div>
+      </div>
+      <div class="mq" aria-hidden="true">
+        <div id="mq"></div>
+      </div>
+    </section>
+
+    <section class="feat-sec">
+      <div class="wrap">
+        <div class="bento" id="ft">
+          <!-- Kartu 01: Utama (Tinggi 2 baris, kontras hijau gelap) -->
+          <article class="fc fc-hero" style="--i:0">
+            <div class="fc-head">
+              <span class="fc-pill">Favorit WFC</span>
+              <span class="fc-num">01</span>
+            </div>
+            <div class="fc-body">
+              <div class="fc-ico">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                  <line x1="12" y1="20" x2="12.01" y2="20" />
+                </svg>
+              </div>
+              <h3>WiFi 100 Mbps</h3>
+              <p>Koneksi simetris stabil untuk meeting online, upload file besar, dan nugas tanpa batas waktu duduk.</p>
+            </div>
+            <div class="fc-foot"><span>Dedicated Fiber</span><span>•</span><span>Tanpa Limit</span></div>
+          </article>
+
+          <!-- Kartu 02: Lebar horizontal -->
+          <article class="fc fc-wide" style="--i:1">
+            <div class="fc-ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-5" />
+                <path d="M9 8V2" />
+                <path d="M15 8V2" />
+                <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" />
+              </svg>
+            </div>
+            <div class="fc-text">
+              <div class="fc-inline-head">
+                <h3>Colokan di Tiap Meja</h3>
+                <span class="fc-num">02</span>
+              </div>
+              <p>Stopkontak tertanam rapi di setiap sudut meja indoor maupun semi-outdoor, laptop aman seharian.</p>
+            </div>
+          </article>
+
+          <!-- Kartu 03: Sage -->
+          <article class="fc fc-sage" style="--i:2">
+            <div class="fc-head">
+              <div class="fc-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+              </div>
+              <span class="fc-num">03</span>
+            </div>
+            <h3>Area Outdoor PAKU</h3>
+            <p>Rimbun di bawah pohon trembesi, berangin sejuk, dan area khusus merokok.</p>
+          </article>
+
+          <!-- Kartu 04: Warm Cream -->
+          <article class="fc fc-cream" style="--i:3">
+            <div class="fc-head">
+              <div class="fc-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4" />
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />
+                </svg>
+              </div>
+              <span class="fc-num">04</span>
+            </div>
+            <h3>Parkir Luas Gratis</h3>
+            <p>Halaman parkir motor & mobil tertata langsung di depan kedai.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-sec">
+      <div class="wrap">
+        <div class="menu-layout">
+          <!-- Panel Kiri Sticky -->
+          <aside class="menu-side">
+            <span class="kicker">Sajian Harian</span>
+            <h2>Daftar Menu</h2>
+            <p class="cat-note" id="cn">Racikan espresso biji lokal Malang dan seduhan manual pilihan setiap hari.</p>
+
+            <div class="search-box">
+              <svg class="s-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input id="q" type="search" placeholder="Cari kopi, matcha, ayam…" aria-label="Cari menu">
+              <button type="button" id="qc" class="s-clear" aria-label="Hapus pencarian" hidden>×</button>
+            </div>
+
+            <div class="tabs-wrap">
+              <div class="tabs" id="tb" role="tablist" aria-label="Kategori menu"></div>
+            </div>
+
+            <div class="menu-hint">
+              <span>Harga dalam ribuan rupiah. Klik <b>+ Pesan</b> untuk langsung terhubung ke WhatsApp kasir.</span>
+            </div>
+          </aside>
+
+          <!-- Panel Kanan Daftar Menu -->
+          <div class="menu-stage">
+            <div class="menu" id="ml" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cerita" class="story-sec">
+      <div class="wrap">
+        <div class="story-top">
+          <div class="story-copy">
+            <div class="story-eyebrow">
+              <span class="kicker">Jejak Langkah</span>
+              <span class="story-loc">Est. 2019 — Jl. Sinjai</span>
+            </div>
+            <h2>Cerita kami</h2>
+            <blockquote class="story-quote">
+              <span class="q-mark" aria-hidden="true">“</span>
+              <p>“PAKU” diambil dari pohon trembesi di depan kedai yang jadi tempat berteduh pertama kami. Dari gerobak
+                kecil, kini jadi ruang yang dipakai mahasiswa, pekerja lepas, dan keluarga.</p>
+            </blockquote>
+            <div class="story-sign">
+              <div class="sign-badge">TK</div>
+              <div>
+                <b>Kopi PAKU</b>
+                <span>Disangrai lokal, diseduh satu per satu.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="polaroid-stage" id="polDeck">
+            <div class="pol-stack-bg s2" aria-hidden="true"></div>
+            <div class="pol-stack-bg s1" aria-hidden="true"></div>
+
+            <figure class="polaroid">
+              <span class="tape" aria-hidden="true"></span>
+              <div class="pol-photo" id="polView" title="Klik untuk foto berikutnya"></div>
+
+              <figcaption class="pol-cap">
+                <span id="polCode">Arsip #01</span>
+                <b id="polTitle">Foto pemilik / barista</b>
+              </figcaption>
+
+              <div class="pol-nav">
+                <button type="button" class="pol-btn" id="polPrev" aria-label="Foto sebelumnya">←</button>
+                <div class="pol-dots" id="polDots"></div>
+                <span class="pol-count" id="polCount">1/4</span>
+                <button type="button" class="pol-btn" id="polNext" aria-label="Foto berikutnya">→</button>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="chronicle" id="tl">
+          <div class="chron-track" aria-hidden="true">
+            <div class="chron-fill" id="tf"></div>
+          </div>
+
+          <article class="folio is-active" data-step="0" style="--i:0">
+            <div class="folio-node"><span>01</span></div>
+            <div class="folio-box">
+              <div class="folio-tab">
+                <b>2019</b>
+                <span>Awal Mula</span>
+              </div>
+              <p>Mulai dari gerobak kopi di bawah pohon trembesi, Jl. Sinjai.</p>
+            </div>
+          </article>
+
+          <article class="folio" data-step="1" style="--i:1">
+            <div class="folio-node"><span>02</span></div>
+            <div class="folio-box">
+              <div class="folio-tab">
+                <b>2021</b>
+                <span>Kedai Pertama</span>
+              </div>
+              <p>Pindah ke ruko sendiri dengan 12 meja dan satu mesin espresso.</p>
+            </div>
+          </article>
+
+          <article class="folio" data-step="2" style="--i:2">
+            <div class="folio-node"><span>03</span></div>
+            <div class="folio-box">
+              <div class="folio-tab">
+                <b>2023</b>
+                <span>Ekspansi</span>
+              </div>
+              <p>Membuka area outdoor dan kerja sama dengan petani kopi Dampit.</p>
+            </div>
+          </article>
+
+          <article class="folio" data-step="3" style="--i:3">
+            <div class="folio-node"><span>04</span></div>
+            <div class="folio-box">
+              <div class="folio-tab">
+                <b>2025</b>
+                <span>Komunitas</span>
+              </div>
+              <p>Live akustik mingguan dan 5.000 gelas terjual tiap bulan.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" class="gal-sec">
+      <!-- Lapisan Motif & Animasi Background -->
+      <div class="gal-topo" aria-hidden="true"></div>
+      <div class="gal-orb o1" aria-hidden="true"></div>
+      <div class="gal-orb o2" aria-hidden="true"></div>
+
+      <div class="gal-motes" aria-hidden="true">
+        <span style="--x:12%;--s:5px;--d:11s;--delay:0s"></span>
+        <span style="--x:28%;--s:3px;--d:14s;--delay:-4s"></span>
+        <span style="--x:46%;--s:6px;--d:12s;--delay:-2s"></span>
+        <span style="--x:64%;--s:4px;--d:15s;--delay:-7s"></span>
+        <span style="--x:81%;--s:5px;--d:13s;--delay:-3s"></span>
+        <span style="--x:92%;--s:3px;--d:16s;--delay:-9s"></span>
+      </div>
+
+      <!-- Stempel Melingkar Berputar -->
+      <div class="gal-seal" aria-hidden="true">
+        <svg viewBox="0 0 140 140" width="140" height="140">
+          <defs>
+            <path id="sealPath" d="M 70, 70 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
+          </defs>
+          <text font-size="10.2" font-weight="700" letter-spacing="3.1" fill="currentColor">
+            <textPath href="#sealPath">PAKU KOPI • RUANG &amp; SEDUHAN • </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="wrap">
+        <div class="gal-head">
+          <div class="gal-title">
+            <span class="gal-pill">Suasana &amp; Seduhan</span>
+            <h2>Potret Ruang PAKU</h2>
+          </div>
+
+          <div class="gal-right">
+            <p>Sudut tenang untuk bekerja, aroma kopi yang baru diseduh, dan hangatnya obrolan sore. Sentuh atau klik
+              foto untuk melihat detailnya.</p>
+            <div class="gal-filter" id="gf" role="tablist" aria-label="Filter kategori galeri"></div>
+          </div>
+        </div>
+
+        <div class="gal" id="gl"></div>
+      </div>
+    </section>
+
+    <section id="promo" class="promo-sec">
+      <!-- Gelombang Akustik Bergerak di Background -->
+      <div class="promo-waves" aria-hidden="true">
+        <svg class="wave-svg w1" viewBox="0 0 1440 220" preserveAspectRatio="none">
+          <path d="M0,110 C240,190 480,30 720,110 C960,190 1200,30 1440,110" fill="none" stroke="currentColor"
+            stroke-width="1.5" />
+          <path d="M0,140 C260,60 500,210 740,130 C980,50 1220,200 1440,120" fill="none" stroke="currentColor"
+            stroke-width="1" opacity="0.55" />
+        </svg>
+      </div>
+
+      <!-- Ornamen Melayang Halus -->
+      <div class="promo-floaters" aria-hidden="true">
+        <span style="--x:8%;--y:22%;--d:7s">♪</span>
+        <span style="--x:88%;--y:18%;--d:9s">✦</span>
+        <span style="--x:52%;--y:82%;--d:8s">♫</span>
+      </div>
+
+      <div class="wrap">
+        <div class="promo-head">
+          <div>
+            <span class="promo-kicker">Agenda &amp; Penawaran</span>
+            <h2>Promo &amp; Event PAKU</h2>
+          </div>
+          <p>Dari panggung akustik akhir pekan sampai kartu stempel kopi harian. Coba sentuh dan klik tiap kartunya.</p>
+        </div>
+
+        <div class="promo-stage" id="pm">
+          <!-- ARTEFAK 1 (Kiri Tinggi): VIP Backstage Lanyard Pass -->
+          <article class="vip-pass" style="--i:0">
+            <div class="vip-slot" aria-hidden="true"><span></span></div>
+
+            <div class="vip-top">
+              <span class="vip-live"><i class="eq-bars" aria-hidden="true"><span></span><span></span><span></span></i>
+                Setiap Sabtu</span>
+              <span class="vip-no">PASS #01</span>
+            </div>
+
+            <div class="vip-body">
+              <span class="vip-sub">Weekend Acoustic Session</span>
+              <h3>Live Akustik Malam Minggu</h3>
+              <p>Mulai pukul 19.00 WIB hingga selesai. Gratis masuk tanpa batas waktu duduk, cukup pesan minimal satu
+                minuman favoritmu.</p>
+
+              <ul class="vip-list">
+                <li><span>🎸</span> Kurasi musisi akustik lokal Malang</li>
+                <li><span>🕖</span> Pukul 19.00 – 22.00 WIB</li>
+                <li><span>🎟️</span> Free entry, kuota meja terbatas</li>
+              </ul>
+            </div>
+
+            <div class="vip-foot">
+              <div class="vip-barcode" aria-hidden="true"></div>
+              <a class="btn vip-btn" href="#reservasi">Amankan Meja →</a>
+            </div>
+          </article>
+
+          <!-- KOLOM KANAN: 2 Artefak Berbeda Bentuk -->
+          <div class="promo-stack">
+            <!-- ARTEFAK 2 (Kanan Atas): Struk Kasir Bergerigi -->
+            <article class="receipt-card" style="--i:1">
+              <div class="rc-head">
+                <span class="rc-tag">Senin – Kamis · 08.00–15.00</span>
+                <span class="rc-id">STRUK #02</span>
+              </div>
+
+              <div class="rc-body">
+                <div>
+                  <h3>Paket Nugas Hemat</h3>
+                  <p>Es Kopi Susu PAKU + Roti Bakar Cokelat Keju hangat untuk menemani kerja atau skripsian.</p>
+                </div>
+
+                <div class="rc-price">
+                  <span class="old-p">Rp 42.000</span>
+                  <strong class="new-p"><span>Rp 35.000</span></strong>
+                </div>
+              </div>
+
+              <div class="rc-foot">
+                <span class="rc-note">*Berlaku dine-in &amp; takeaway</span>
+                <a class="rc-link" href="#menu">Lihat daftar menu ↗</a>
+              </div>
+            </article>
+
+            <!-- ARTEFAK 3 (Kanan Bawah): Kartu Loyalty 3D Foil Interaktif -->
+            <article class="loyalty-card" id="loyalCard" style="--i:2">
+              <div class="foil-glare" aria-hidden="true"></div>
+
+              <div class="ly-head">
+                <div>
+                  <span class="ly-tag">Member Card · Bulan Ini</span>
+                  <h3>Beli 5 Gratis 1 Cup</h3>
+                </div>
+                <span class="ly-badge" id="stampStatus">5 / 5 Cap</span>
+              </div>
+
+              <p>Kumpulkan 5 cap setiap pembelian minuman, lalu klik cangkir ke-6 di bawah untuk simulasi klaim gratis.
+              </p>
+
+              <div class="ly-bottom">
+                <div class="stamp-bar" id="stampDemo">
+                  <span class="st done">☕</span>
+                  <span class="st done">☕</span>
+                  <span class="st done">☕</span>
+                  <span class="st done">☕</span>
+                  <span class="st done">☕</span>
+                  <button type="button" class="st free" id="freeCup"
+                    aria-label="Klik untuk klaim cup gratis">KLAIM</button>
+                </div>
+
+                <button type="button" class="code-pill" id="promoCodeBtn" hidden title="Klik untuk menyalin kode">
+                  Kode: <b>PAKUGRATIS</b> <span>Salin</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="testi-sec">
+      <div class="wrap" id="tsWrap">
+        <!-- Baris Atas: Judul & Skor Google Sebaris -->
+        <div class="testi-top">
+          <div>
+            <span class="testi-kicker">Apa Kata Mereka</span>
+            <h2>Cerita dari Meja PAKU</h2>
+          </div>
+
+          <div class="google-badge" aria-label="Rating 4.9 dari 5 berdasarkan 320 lebih ulasan Google">
+            <span class="g-stars">★★★★★</span>
+            <div>
+              <b>4.9 / 5.0</b>
+              <small>dari 320+ ulasan Google</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tata Letak Terbuka 2 Kolom (Tanpa Card Container) -->
+        <div class="testi-spread">
+          <!-- Kiri: Indeks Pengulas Interaktif -->
+          <div class="guest-rail" id="tAvatars" role="tablist" aria-label="Daftar pengulas"></div>
+
+          <!-- Kanan: Area Kutipan Editorial + Garis Progres Vertikal -->
+          <div class="quote-stage">
+            <div class="q-track" aria-hidden="true">
+              <span id="tBar"></span>
+            </div>
+
+            <div class="tr" id="tr" aria-live="polite"></div>
+
+            <div class="q-footer">
+              <span class="q-count" id="tc">01 / 05</span>
+              <div class="q-arrows">
+                <button type="button" id="tp" aria-label="Ulasan sebelumnya">←</button>
+                <button type="button" id="tn" aria-label="Ulasan berikutnya">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservasi" class="rc-sec">
+      <div class="wrap two">
+        <!-- KOLOM KIRI: FORM RESERVASI BENTUK KUBAH (DOME ARCH) -->
+        <div class="res-dome">
+          <div class="dome-crest" aria-hidden="true">✦</div>
+
+          <div class="dome-head">
+            <span class="rc-kicker">Booking Meja</span>
+            <h2>Reservasi Tempat</h2>
+            <p>Amankan meja lebih dulu sebelum datang, terutama untuk kerja kelompok atau malam akustik.</p>
+          </div>
+
+          <form id="rf" class="res-form">
+            <label>
+              <span>Nama pemesan</span>
+              <input name="nama" required placeholder="Misal: Raka Pratama">
+            </label>
+
+            <label>
+              <span>Jumlah orang</span>
+              <input name="org" type="number" min="1" max="30" value="2" required>
+            </label>
+
+            <label>
+              <span>Tanggal datang</span>
+              <input name="tgl" type="date" required>
+            </label>
+
+            <label>
+              <span>Jam kedatangan</span>
+              <select name="jam"></select>
+            </label>
+
+            <div class="f">
+              <span class="chip-label">Pilih cepat suasana meja (opsional):</span>
+              <div class="chip-group" id="prefChips" aria-label="Pilihan cepat kebutuhan meja">
+                <button type="button" data-val="Dekat colokan">🔌 Dekat colokan</button>
+                <button type="button" data-val="Area outdoor">🌿 Area outdoor</button>
+                <button type="button" data-val="Indoor AC">❄️ Indoor AC</button>
+                <button type="button" data-val="Dekat panggung akustik">🎸 Dekat akustik</button>
+              </div>
+            </div>
+
+            <label class="f">
+              <span>Catatan tambahan</span>
+              <textarea name="cat" rows="2" placeholder="Tulis permintaan khusus atau klik pilihan di atas…"></textarea>
+            </label>
+
+            <button class="btn f res-submit" type="submit">
+              <span>Kirim Reservasi via WhatsApp</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <p class="hint">Format pesan otomatis terisi di WhatsApp kasir. Tinggal tekan kirim.</p>
+        </div>
+
+        <!-- KOLOM KANAN: KONTAK & PETA TANPA BOX (FLOATING PILLS & CAPSULE MAP) -->
+        <div id="kontak" class="contact-open">
+          <div class="contact-head">
+            <span class="rc-kicker">Lokasi &amp; Jadwal</span>
+            <h2>Mampir ke Kedai</h2>
+            <p>Terletak di tepi Jl. Sinjai dengan area parkir luas dan akses mudah.</p>
+          </div>
+
+          <!-- Kapsul Alamat -->
+          <div class="pill-strip">
+            <div class="pill-ico" aria-hidden="true">📍</div>
+            <div class="pill-txt">
+              <span>Alamat kedai</span>
+              <b>Jl. Sinjai No. 21</b>
+            </div>
+            <button type="button" class="copy-btn" id="copyAddr" data-copy="Jl. Sinjai No. 21">Salin</button>
+          </div>
+
+          <!-- Dua Kapsul Kontak -->
+          <div class="pill-pair">
+            <a class="pill-strip is-link" href="https://wa.me/6283854417991" target="_blank" rel="noopener">
+              <div class="pill-ico" aria-hidden="true">💬</div>
+              <div class="pill-txt">
+                <span>WhatsApp</span>
+                <b>0838-5441-7991 ↗</b>
+              </div>
+            </a>
+
+            <div class="pill-strip">
+              <div class="pill-ico" aria-hidden="true">📸</div>
+              <div class="pill-txt">
+                <span>Instagram</span>
+                <b>@dikodeaja_official</b>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jadwal Operasional Berbentuk Baris Pil -->
+          <div class="hours-open">
+            <div class="hours-title">Jam Operasional Kedai</div>
+            <table class="jam" id="jm"></table>
+          </div>
+
+          <!-- Peta Berbentuk Kapsul Oval (Bukan Kotak) -->
+          <div class="map-capsule">
+            <iframe title="Peta lokasi Kopi PAKU" loading="lazy"
+              src="https://www.google.com/maps?q=Jalan+Kawi+Malang&output=embed"></iframe>
+            <a class="btn map-btn"
+              href="https://www.google.com/maps/dir/?api=1&destination=Jalan+Kawi+Malang" target="_blank"
+              rel="noopener">Petunjuk arah ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER PENAWARAN JASA WEBSITE (SILUET LENGKUNG ASIMETRIS) -->
+    <section class="cta-sec">
+      <!-- Gelombang Transisi Organik dari Section Atas -->
+      <div class="cta-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 74" preserveAspectRatio="none">
+          <path d="M0,0 L1440,0 L1440,28 C1160,82 820,-14 480,42 C260,76 110,56 0,24 Z" fill="currentColor" />
+        </svg>
+      </div>
+
+      <!-- Pendaran Aurora & Cincin Radar di Latar Belakang -->
+      <div class="cta-aurora" aria-hidden="true"></div>
+      <div class="cta-rings" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="wrap cta-stage">
+        <div class="cta-copy">
+          <span class="cta-pill">
+            <i class="pill-pulse" aria-hidden="true"></i>
+            Demo Website Bisnis Kuliner &amp; Cafe
+          </span>
+          <h2>Punya cafe atau kedai kopi? Bikin tampil lebih meyakinkan seperti ini.</h2>
+          <p>Lebih kredibel daripada sekadar link di bio. Dilengkapi katalog menu interaktif, status jam buka otomatis, dan reservasi langsung masuk ke WhatsApp.</p>
+
+          <div class="cta-tags">
+            <span style="--d:0s">✓ Desain Custom</span>
+            <span style="--d:0.45s">✓ Cepat di HP</span>
+            <span style="--d:0.9s">✓ Terindeks Google</span>
+          </div>
+        </div>
+
+        <div class="cta-action">
+          <!-- Pratinjau Melayang Simulasi Pesan Masuk -->
+          <div class="cta-preview" aria-hidden="true">
+            <div class="cp-icon">💬</div>
+            <div class="cp-text">
+              <small>Reservasi Otomatis Masuk WA</small>
+              <b>“Halo Kopi PAKU, booking 4 orang…”</b>
+            </div>
+            <span class="cp-badge">Aktif</span>
+          </div>
+
+          <a class="btn cta-btn"
+            href="https://wa.me/6283854417991?text=Halo%2C%20saya%20lihat%20demo%20web%20Kopi%20PAKU%20dan%20tertarik%20dibuatkan%20website%20untuk%20bisnis%20saya"
+            target="_blank" rel="noopener">
+            <span>Konsultasi Gratis via WA</span>
+            <i class="cta-arr" aria-hidden="true">→</i>
+          </a>
+          <small class="cta-note">Tanya konsep &amp; estimasi pengerjaan dulu, gratis.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <a class="logo" href="#top">Kopi<i>.</i>PAKU</a>
+        <span>© 2026 Kopi PAKU (Website Contoh)</span>
+      </div>
+
+      <nav class="foot-links" aria-label="Navigasi bawah">
+        <a href="#menu">Menu</a>
+        <a href="#cerita">Cerita</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#promo">Promo</a>
+        <a href="#reservasi">Reservasi</a>
+      </nav>
+
+      <div class="foot-credit">
+        <span>Dibuat oleh <b>dikodeaja_official</b> · Jasa Pembuatan Website</span>
+        <a href="#top" class="to-top" aria-label="Kembali ke atas">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa"
+    href="https://wa.me/6283854417991?text=Halo%2C%20saya%20lihat%20demo%20web%20Kopi%20PAKU%20dan%20tertarik%20buat%20website"
+    target="_blank" rel="noopener"><i class="wa-dot" aria-hidden="true"></i>Chat WhatsApp</a>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/hours.js" defer></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/marquee.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
+  <script src="js/reservation.js" defer></script>
+</body>
+
+</html>

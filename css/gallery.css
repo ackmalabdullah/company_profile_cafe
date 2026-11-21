@@ -1,0 +1,905 @@
+.gal-sec {
+  position: relative;
+  background: #111f18;
+  color: #f5f6f1;
+  padding: 88px 0 96px;
+  overflow: hidden;
+}
+
+/* 1. Motif Kontur Topografi Kopi yang Bergerak Pelan */
+.gal-topo {
+  position: absolute;
+  inset: -60px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%23e8c96a' stroke-width='1.1' stroke-opacity='0.065'%3E%3Cpath d='M-40 90 C 60 30, 150 150, 260 80 C 340 30, 400 110, 460 70'/%3E%3Cpath d='M-40 150 C 70 90, 160 210, 270 140 C 350 90, 400 170, 460 130'/%3E%3Cpath d='M-40 210 C 80 150, 170 270, 280 200 C 360 150, 400 230, 460 190'/%3E%3Cpath d='M-40 270 C 60 220, 150 330, 260 265 C 340 215, 400 290, 460 255'/%3E%3Cpath d='M-40 335 C 75 280, 165 390, 275 325 C 355 275, 400 350, 460 315'/%3E%3Ccircle cx='310' cy='110' r='44'/%3E%3Ccircle cx='310' cy='110' r='74'/%3E%3Ccircle cx='110' cy='310' r='38'/%3E%3Ccircle cx='110' cy='310' r='68'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 420px 420px;
+  pointer-events: none;
+  animation: topoPan 34s linear infinite;
+}
+
+@keyframes topoPan {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-420px, -210px, 0); }
+}
+
+/* 2. Pendaran Cahaya Organik */
+.gal-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.48;
+  animation: orbDrift 14s ease-in-out infinite alternate;
+}
+
+.gal-orb.o1 {
+  width: 440px;
+  height: 440px;
+  top: -120px;
+  left: -90px;
+  background: radial-gradient(circle, rgba(29, 74, 56, 0.95), transparent 70%);
+}
+
+.gal-orb.o2 {
+  width: 400px;
+  height: 400px;
+  bottom: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(232, 201, 106, 0.24), transparent 70%);
+  animation-delay: -6s;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(35px, 25px) scale(1.12); }
+}
+
+/* 3. Partikel Aroma / Cahaya Hangat Melayang */
+.gal-motes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gal-motes span {
+  position: absolute;
+  left: var(--x, 50%);
+  bottom: -16px;
+  width: var(--s, 4px);
+  height: var(--s, 4px);
+  border-radius: 50%;
+  background: var(--acc);
+  box-shadow: 0 0 10px rgba(232, 201, 106, 0.7);
+  opacity: 0;
+  animation: moteRise var(--d, 12s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes moteRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(0.7);
+  }
+  25% {
+    opacity: 0.45;
+  }
+  75% {
+    opacity: 0.28;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-560px) translateX(24px) scale(1.15);
+  }
+}
+
+/* 4. Stempel Tipografi Melingkar Berputar */
+.gal-seal {
+  position: absolute;
+  top: 44px;
+  right: max(24px, calc((100vw - 1160px) / 2 - 20px));
+  width: 136px;
+  height: 136px;
+  color: rgba(232, 201, 106, 0.16);
+  pointer-events: none;
+  animation: sealSpin 32s linear infinite;
+}
+
+@keyframes sealSpin {
+  to { transform: rotate(360deg); }
+}
+
+.gal-sec .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Galeri */
+.gal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+
+.gal-pill {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--acc);
+  background: rgba(232, 201, 106, 0.12);
+  border: 1px solid rgba(232, 201, 106, 0.28);
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.gal-title h2 {
+  font-size: clamp(34px, 4.6vw, 50px);
+  color: #fff;
+}
+
+.gal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  max-width: 470px;
+}
+
+.gal-right p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(245, 246, 241, 0.74);
+  text-align: right;
+}
+
+/* Filter Pill Mengambang */
+.gal-filter {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 99px;
+  backdrop-filter: blur(10px);
+}
+
+.gal-filter button {
+  border: 0;
+  background: transparent;
+  color: rgba(245, 246, 241, 0.75);
+  font: 700 13px 'DM Sans', sans-serif;
+  padding: 8px 16px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gal-filter button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.gal-filter button.a {
+  background: var(--acc);
+  color: var(--ink);
+  box-shadow: 0 6px 18px -4px rgba(232, 201, 106, 0.45);
+}
+
+/* Grid Mosaik Organik */
+.gal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 185px;
+  gap: 18px;
+}
+
+.gal:not(.is-filtered) .g-hero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gal:not(.is-filtered) .g-tall {
+  grid-row: span 2;
+}
+
+.gal:not(.is-filtered) .g-wide {
+  grid-column: span 2;
+}
+
+.gal.is-filtered {
+  grid-auto-rows: 235px;
+}
+
+/* Efek Focus-Dimming: saat satu kartu disentuh, kartu lain meredup lembut */
+.gal:hover .gi {
+  opacity: 0.62;
+  transform: scale(0.988);
+}
+
+.gal .gi:hover {
+  opacity: 1;
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(232, 201, 106, 0.55);
+  box-shadow: 0 24px 44px -16px rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+/* Kartu Galeri Lembut & Luwes */
+.gi {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  border-radius: 26px;
+  background: linear-gradient(155deg, #1b3227 0%, #14251d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  overflow: hidden;
+  cursor: zoom-in;
+  animation: galBloom 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.4s ease,
+              border-color 0.35s ease,
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23e8c96a' stroke-width='1' stroke-opacity='0.07'%3E%3Ccircle cx='80' cy='80' r='34'/%3E%3Ccircle cx='80' cy='80' r='56'/%3E%3Ccircle cx='80' cy='80' r='78'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 210px 210px;
+  pointer-events: none;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.gi:hover::before {
+  transform: scale(1.18) rotate(12deg);
+  opacity: 0.9;
+}
+
+.gi::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(260px circle at var(--mx) var(--my), rgba(232, 201, 106, 0.18), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.35s ease;
+}
+
+.gi:hover::after {
+  opacity: 1;
+}
+
+.gi:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+.gi-media {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gi:hover .gi-media {
+  transform: scale(1.06);
+}
+
+.gi-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.gi-ph-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(232, 201, 106, 0.09);
+  border: 1px solid rgba(232, 201, 106, 0.26);
+  color: var(--acc);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 8px rgba(232, 201, 106, 0.03);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease;
+}
+
+.gi:hover .gi-ph-ring {
+  transform: scale(1.1) rotate(-6deg);
+  background: rgba(232, 201, 106, 0.18);
+}
+
+.gi-ph-txt {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(245, 246, 241, 0.55);
+}
+
+.gi-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.gi-cat {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: rgba(17, 31, 24, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.gi-expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--acc);
+  padding: 5px 11px;
+  border-radius: 99px;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.92);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gi:hover .gi-expand {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.gi-cap {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  padding: 12px 16px;
+  border-radius: 18px;
+  background: rgba(17, 31, 24, 0.68);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(2px);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.gi:hover .gi-cap {
+  transform: translateY(0);
+  background: rgba(17, 31, 24, 0.85);
+  border-color: rgba(232, 201, 106, 0.3);
+}
+
+.gi-cap b {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16.5px;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.gi-cap small {
+  display: block;
+  font-size: 12px;
+  color: rgba(245, 246, 241, 0.72);
+  margin-top: 2px;
+}
+
+@keyframes galBloom {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   LIGHTBOX LAYAR PENUH: IMMERSIVE GLASS EXHIBITION VIEWER
+   ========================================================= */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 24px 22px;
+  background: radial-gradient(circle at 50% 42%, rgba(24, 48, 37, 0.94) 0%, rgba(8, 16, 12, 0.97) 100%);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  color: #f5f6f1;
+  user-select: none;
+}
+
+.lb.on {
+  display: flex;
+  animation: lbBackdropIn 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes lbBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Top HUD Bar Mengambang */
+.lb-hud {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.lb-hud-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lb-badge-cat {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--acc);
+  padding: 5px 13px;
+  border-radius: 99px;
+}
+
+.lb-cnt {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: rgba(245, 246, 241, 0.85);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 13px;
+  border-radius: 99px;
+  font-variant-numeric: tabular-nums;
+}
+
+.lb-hint {
+  font-size: 12px;
+  color: rgba(245, 246, 241, 0.48);
+  margin-left: 4px;
+}
+
+.lb-hud-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lb-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font: 700 12.5px 'DM Sans', sans-serif;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lb-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(232, 201, 106, 0.45);
+  transform: translateY(-1px);
+}
+
+.lb-pill-btn.is-active {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: var(--ink);
+}
+
+.lb-close-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.lb-close-btn:hover {
+  background: #e25555;
+  border-color: #e25555;
+  color: #fff;
+}
+
+/* Area Tengah: Stage Foto + Panah Samping Melayang */
+.lb-center {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1120px;
+  width: 100%;
+  margin: 14px auto;
+  min-height: 0;
+}
+
+.lb-side-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(17, 31, 24, 0.72);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lb-side-nav.prev { left: 4px; }
+.lb-side-nav.next { right: 4px; }
+
+.lb-side-nav:hover {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: var(--ink);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lb-side-nav:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+/* Viewport Gambar dengan Fitur Zoom & Pan */
+.lb-stage {
+  --zx: 50%;
+  --zy: 50%;
+  position: relative;
+  width: calc(100% - 136px);
+  height: 100%;
+  max-height: 58vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 26px;
+  cursor: zoom-in;
+  touch-action: pan-y;
+}
+
+.lb-stage.is-zoomed {
+  cursor: zoom-out;
+}
+
+.lb-media-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: var(--zx) var(--zy);
+}
+
+.lb-stage.is-zoomed .lb-media-wrap {
+  transform: scale(1.75);
+}
+
+.lb-media-wrap img {
+  max-width: 100%;
+  max-height: 58vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  box-shadow: 0 28px 64px -16px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Animasi Geser Arah Kiri / Kanan */
+.lb-media-wrap.slide-next {
+  animation: lbSlideNext 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lb-media-wrap.slide-prev {
+  animation: lbSlidePrev 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes lbSlideNext {
+  from {
+    opacity: 0;
+    transform: translateX(36px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes lbSlidePrev {
+  from {
+    opacity: 0;
+    transform: translateX(-36px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Bingkai Placeholder Pameran Saat Foto Asli Belum Diisi */
+.lb-placeholder-card {
+  width: min(560px, 92%);
+  aspect-ratio: 16 / 10;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #1b3428 0%, #12231b 100%);
+  border: 1.5px dashed rgba(232, 201, 106, 0.38);
+  box-shadow: 0 28px 60px -18px rgba(0, 0, 0, 0.65),
+              inset 0 0 0 12px rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lb-placeholder-card::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 201, 106, 0.12);
+  box-shadow: 0 0 0 36px rgba(232, 201, 106, 0.03);
+  pointer-events: none;
+}
+
+.lb-ph-code {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--acc);
+  background: rgba(232, 201, 106, 0.12);
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.lb-placeholder-card strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+.lb-placeholder-card span {
+  font-size: 13px;
+  color: rgba(245, 246, 241, 0.58);
+  max-width: 34ch;
+}
+
+/* Dock Bawah: Caption Glass Pill + Filmstrip Thumbnails */
+.lb-dock {
+  position: relative;
+  z-index: 10;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.lb-caption-pill {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  padding: 10px 24px;
+  border-radius: 99px;
+}
+
+.lb-caption-pill b {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 17px;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.lb-caption-pill small {
+  font-size: 13.5px;
+  color: rgba(245, 246, 241, 0.72);
+}
+
+/* Filmstrip Thumbnail Navigasi Cepat */
+.lb-thumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 4px 6px;
+  scrollbar-width: none;
+}
+
+.lb-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.lb-thumb {
+  position: relative;
+  width: 58px;
+  height: 42px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: #1a3026;
+  color: rgba(245, 246, 241, 0.65);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0.55;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lb-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lb-thumb:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.lb-thumb.a {
+  opacity: 1;
+  border-color: var(--acc);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 18px -6px rgba(232, 201, 106, 0.55);
+  color: var(--acc);
+}
+
+/* Responsif Tablet & HP */
+@media (max-width: 920px) {
+  .gal-seal {
+    width: 104px;
+    height: 104px;
+    top: 26px;
+    right: 18px;
+  }
+  .gal-right {
+    align-items: flex-start;
+  }
+  .gal-right p {
+    text-align: left;
+  }
+  .gal {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 14px;
+  }
+  .gal:not(.is-filtered) .g-hero {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .gal:not(.is-filtered) .g-tall {
+    grid-row: span 1;
+  }
+  .gal:not(.is-filtered) .g-wide {
+    grid-column: span 2;
+  }
+  .gal:hover .gi {
+    opacity: 1;
+    transform: none;
+  }
+  .lb-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .gal-sec {
+    padding: 62px 0 68px;
+  }
+  .gal-seal {
+    display: none;
+  }
+  .gal-filter {
+    border-radius: 20px;
+  }
+  .gal {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 215px;
+  }
+  .gal:not(.is-filtered) .g-hero,
+  .gal:not(.is-filtered) .g-tall,
+  .gal:not(.is-filtered) .g-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .lb {
+    padding: 14px 14px 18px;
+  }
+  .lb-stage {
+    width: 100%;
+    max-height: 52vh;
+  }
+  .lb-side-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .lb-caption-pill {
+    border-radius: 18px;
+    padding: 10px 16px;
+  }
+  .lb-caption-pill b {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 2px;
+  }
+}

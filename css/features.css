@@ -1,0 +1,245 @@
+.feat-sec {
+  padding: 52px 0 24px;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.fc {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+/* Efek cahaya halus mengikuti posisi kursor */
+.fc::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(280px circle at var(--mx) var(--my), rgba(232, 201, 106, 0.16), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.fc:hover::after {
+  opacity: 1;
+}
+
+.fc:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px -16px rgba(23, 32, 27, 0.14);
+}
+
+/* Susunan & Bentuk Sudut Asimetris (Leaf-Cut Geometry) */
+.fc-hero {
+  grid-column: span 5;
+  grid-row: span 2;
+  background: var(--g);
+  color: #fff;
+  border-color: var(--g);
+  border-radius: 36px 8px 36px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 290px;
+}
+
+.fc-hero::before {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 24px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.fc-wide {
+  grid-column: span 7;
+  border-radius: 8px 32px 8px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fc-sage {
+  grid-column: span 4;
+  background: var(--gl);
+  border-color: #c5d6c7;
+  border-radius: 28px 8px 28px 8px;
+}
+
+.fc-cream {
+  grid-column: span 3;
+  background: #fbf8ee;
+  border-color: #e4dcc0;
+  border-radius: 8px 28px 8px 28px;
+}
+
+/* Header & Elemen Internal Kartu */
+.fc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.fc-inline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.fc-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--acc);
+  color: var(--ink);
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.fc-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mut);
+  opacity: 0.6;
+}
+
+.fc-hero .fc-num {
+  color: var(--acc);
+  opacity: 0.9;
+}
+
+.fc-ico {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 16px 4px 16px 4px;
+  background: var(--gl);
+  color: var(--g);
+  display: grid;
+  place-items: center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease, color 0.3s ease;
+}
+
+.fc-hero .fc-ico {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--acc);
+  margin-bottom: 16px;
+}
+
+.fc-sage .fc-ico {
+  background: #fff;
+}
+
+.fc-cream .fc-ico {
+  background: #f1e9cf;
+}
+
+.fc:hover .fc-ico {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.fc h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.fc-hero h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.fc p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--mut);
+}
+
+.fc-hero p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 34ch;
+}
+
+.fc-foot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--acc);
+}
+
+/* Animasi Scroll Reveal */
+.bento.anim .fc {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bento.anim.in .fc {
+  animation: bentoIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i) * 90ms);
+}
+
+@keyframes bentoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fc-hero {
+    grid-column: span 2;
+    grid-row: auto;
+    min-height: auto;
+  }
+  .fc-wide {
+    grid-column: span 2;
+  }
+  .fc-sage,
+  .fc-cream {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+  .fc-hero,
+  .fc-wide,
+  .fc-sage,
+  .fc-cream {
+    grid-column: span 1;
+  }
+  .fc-wide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

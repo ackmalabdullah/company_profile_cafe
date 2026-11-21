@@ -1,0 +1,391 @@
+.testi-sec {
+  position: relative;
+  background: var(--bg);
+  padding: 96px 0 104px;
+  border-top: 1px solid var(--line);
+}
+
+/* --- HEADER SEBARIS --- */
+.testi-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+.testi-kicker {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--g);
+  background: var(--gl);
+  padding: 5px 13px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+}
+
+.testi-top h2 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: 1.06;
+  color: var(--ink);
+}
+
+/* Lencana Google Minimalis Tanpa Kotak Tebal */
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.g-stars {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #d99b1e;
+}
+
+.google-badge b {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.google-badge small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--mut);
+}
+
+/* =========================================================
+   TATA LETAK TERBUKA (TANPA CARD CONTAINER)
+   ========================================================= */
+.testi-spread {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* --- KOLOM KIRI: INDEKS BUKU TAMU VERTIKAL --- */
+.guest-rail {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 4px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: var(--mut);
+  transition: color 0.25s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.guest-item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.guest-item:hover {
+  color: var(--ink);
+  transform: translateX(4px);
+}
+
+.guest-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.g-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mut);
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.g-name {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.g-role {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.g-arrow {
+  font-size: 15px;
+  color: var(--g);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Status Aktif pada Indeks */
+.guest-item.a {
+  color: var(--g);
+  transform: translateX(8px);
+}
+
+.guest-item.a .g-num {
+  color: var(--g);
+  opacity: 1;
+}
+
+.guest-item.a .g-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- KOLOM KANAN: PANGGUNG TIPOGRAFI TERBUKA --- */
+.quote-stage {
+  position: relative;
+  padding-left: 38px;
+}
+
+/* Garis Progres Vertikal di Sisi Kiri Kutipan */
+.q-track {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.q-track span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--g);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.tr {
+  min-height: 215px;
+  display: flex;
+  align-items: center;
+}
+
+.q-entry {
+  animation: quoteReveal 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes quoteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.q-dish {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--g);
+  margin-bottom: 16px;
+}
+
+.q-dish::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acc);
+  box-shadow: 0 0 0 3px rgba(29, 74, 56, 0.15);
+}
+
+.q-text {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(22px, 2.7vw, 31px);
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.q-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.q-init {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--g);
+  color: var(--acc);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13.5px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.q-author b {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16.5px;
+  color: var(--ink);
+}
+
+.q-author span {
+  font-size: 13px;
+  color: var(--mut);
+}
+
+/* Navigasi Bawah yang Ringkas & Menyatu */
+.q-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+
+.q-count {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--mut);
+  font-variant-numeric: tabular-nums;
+}
+
+.q-arrows {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.q-arrows button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.q-arrows button:hover {
+  border-color: var(--g);
+  background: var(--g);
+  color: var(--acc);
+  transform: scale(1.06);
+}
+
+.q-arrows button:active {
+  transform: scale(0.95);
+}
+
+/* =========================================================
+   RESPONSIF TABLET & HP
+   ========================================================= */
+@media (max-width: 860px) {
+  .testi-spread {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Pada layar kecil, daftar pengulas jadi tab horizontal ramping */
+  .guest-rail {
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--line);
+    gap: 6px;
+  }
+
+  .guest-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .guest-item {
+    width: auto;
+    flex-shrink: 0;
+    padding: 10px 14px;
+    border-top: 0 !important;
+    border-bottom: 2px solid transparent;
+    transform: none !important;
+  }
+
+  .guest-item.a {
+    border-bottom-color: var(--g);
+  }
+
+  .g-role,
+  .g-arrow {
+    display: none;
+  }
+
+  /* Garis progres berpindah ke atas kutipan secara horizontal */
+  .quote-stage {
+    padding-left: 0;
+    padding-top: 22px;
+  }
+
+  .q-track {
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+  }
+
+  .q-track span {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 540px) {
+  .testi-sec {
+    padding: 66px 0 74px;
+  }
+  .tr {
+    min-height: 235px;
+  }
+}

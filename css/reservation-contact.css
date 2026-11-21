@@ -1,0 +1,414 @@
+.rc-sec {
+  position: relative;
+  background: var(--gl);
+  padding: 96px 0 88px;
+  border-top: 1px solid rgba(29, 74, 56, 0.14);
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.rc-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--g);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(29, 74, 56, 0.18);
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   KOLOM KIRI: FORM RESERVASI BENTUK KUBAH (DOME ARCH)
+   ========================================================= */
+.res-dome {
+  position: relative;
+  background: #fffdf8;
+  border: 1.5px solid rgba(29, 74, 56, 0.24);
+  border-radius: 240px 240px 36px 36px;
+  padding: 76px 36px 34px;
+  box-shadow: 0 26px 46px -22px rgba(23, 32, 27, 0.18);
+}
+
+/* Lencana bulat kecil di puncak lengkungan kubah */
+.dome-crest {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--g);
+  color: var(--acc);
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 6px var(--gl);
+}
+
+.dome-head {
+  text-align: center;
+  max-width: 36ch;
+  margin: 0 auto 24px;
+  padding-bottom: 18px;
+  border-bottom: 1.5px dashed var(--line);
+}
+
+.dome-head .rc-kicker {
+  background: var(--gl);
+  border: 0;
+}
+
+.dome-head h2 {
+  font-size: clamp(28px, 3.6vw, 38px);
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.dome-head p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--mut);
+}
+
+/* Form dengan Input Kapsul (Pill Inputs) */
+.res-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.res-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.res-form label > span {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink);
+  padding-left: 10px;
+}
+
+.res-form .f {
+  grid-column: 1 / -1;
+}
+
+.res-form input,
+.res-form select {
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 99px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font: 500 14px 'DM Sans', sans-serif;
+  color: var(--ink);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.res-form textarea {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 22px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font: 500 14px 'DM Sans', sans-serif;
+  color: var(--ink);
+  resize: vertical;
+  min-height: 66px;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.res-form input:focus,
+.res-form select:focus,
+.res-form textarea:focus {
+  outline: none;
+  border-color: var(--g);
+  box-shadow: 0 0 0 3.5px rgba(29, 74, 56, 0.12);
+}
+
+.chip-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--mut);
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chip-group button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font: 600 12.5px 'DM Sans', sans-serif;
+  padding: 6px 13px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chip-group button:hover {
+  border-color: var(--g);
+  background: var(--gl);
+}
+
+.chip-group button.a {
+  background: var(--g);
+  border-color: var(--g);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.res-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 15px;
+  margin-top: 4px;
+  box-shadow: 0 12px 24px -10px rgba(29, 74, 56, 0.5);
+}
+
+.res-submit:hover {
+  transform: translateY(-2px);
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--mut);
+  text-align: center;
+}
+
+/* =========================================================
+   KOLOM KANAN: KONTAK & PETA TANPA BOX (FLOATING PILLS)
+   ========================================================= */
+.contact-open {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-head {
+  margin-bottom: 4px;
+}
+
+.contact-head h2 {
+  font-size: clamp(30px, 3.8vw, 42px);
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.contact-head p {
+  font-size: 14.5px;
+  color: var(--mut);
+  line-height: 1.5;
+}
+
+/* Kapsul Informasi Mengambang */
+.pill-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid rgba(29, 74, 56, 0.18);
+  border-radius: 99px;
+  padding: 10px 16px 10px 10px;
+  box-shadow: 0 10px 22px -16px rgba(23, 32, 27, 0.18);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.pill-strip.is-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--g);
+  box-shadow: 0 14px 26px -14px rgba(29, 74, 56, 0.25);
+}
+
+.pill-ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gl);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.pill-txt {
+  flex: 1;
+  min-width: 0;
+}
+
+.pill-txt span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mut);
+}
+
+.pill-txt b {
+  display: block;
+  font-size: 14.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copy-btn {
+  border: 0;
+  background: var(--g);
+  color: var(--acc);
+  font: 700 12px 'DM Sans', sans-serif;
+  padding: 7px 14px;
+  border-radius: 99px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--g2);
+  transform: scale(1.05);
+}
+
+.pill-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Jadwal Buka: Setiap Baris Jadi Kapsul Pil */
+.hours-open {
+  margin-top: 4px;
+}
+
+.hours-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--g);
+  padding-left: 12px;
+  margin-bottom: 6px;
+}
+
+.jam {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  font-size: 13.5px;
+}
+
+.jam td {
+  background: rgba(255, 255, 255, 0.78);
+  padding: 8px 16px;
+  color: var(--ink);
+  border-top: 1px solid rgba(29, 74, 56, 0.12);
+  border-bottom: 1px solid rgba(29, 74, 56, 0.12);
+}
+
+.jam td:first-child {
+  border-left: 1px solid rgba(29, 74, 56, 0.12);
+  border-radius: 99px 0 0 99px;
+}
+
+.jam td:last-child {
+  border-right: 1px solid rgba(29, 74, 56, 0.12);
+  border-radius: 0 99px 99px 0;
+  text-align: right;
+  font-weight: 700;
+  color: var(--g);
+  font-variant-numeric: tabular-nums;
+}
+
+.jam tr.today td,
+.jam tr.on td {
+  background: #fff;
+  border-color: var(--g);
+  font-weight: 700;
+}
+
+/* Peta Google Maps Berbentuk Kapsul Oval */
+.map-capsule {
+  position: relative;
+  height: 195px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 20px 36px -18px rgba(23, 32, 27, 0.25);
+  margin-top: 4px;
+}
+
+.map-capsule iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.map-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  padding: 8px 18px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.map-btn:hover {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* Responsif Tablet & HP */
+@media (max-width: 940px) {
+  .two {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+}
+
+@media (max-width: 560px) {
+  .rc-sec {
+    padding: 68px 0 64px;
+  }
+  .res-dome {
+    border-radius: 130px 130px 28px 28px;
+    padding: 68px 20px 26px;
+  }
+  .res-form {
+    grid-template-columns: 1fr;
+  }
+  .pill-pair {
+    grid-template-columns: 1fr;
+  }
+  .map-capsule {
+    border-radius: 80px;
+    height: 185px;
+  }
+}

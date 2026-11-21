@@ -1,0 +1,45 @@
+.ph {
+  position: relative;
+  background: var(--g) var(--img, none) center/cover;
+  overflow: hidden;
+  border-radius: var(--r);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  color: #fff;
+  font-size: 13px;
+  min-height: 120px;
+}
+.ph:not([style*='--img'])::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(232, 201, 106, 0.35), transparent 45%), repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 14px);
+}
+.ph[style*='--img'] span {
+  display: none;
+}
+.ph span {
+  position: relative;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.c1 {
+  background-color: #1d4a38;
+}
+.c2 {
+  background-color: #2f6b4f;
+}
+.c3 {
+  background-color: #0f2e22;
+}
+.c4 {
+  background-color: #4b7d62;
+}
+.c5 {
+  background-color: #8a9a5b;
+}
+.c6 {
+  background-color: #355e4c;
+}

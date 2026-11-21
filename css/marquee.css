@@ -1,0 +1,4 @@
+.mq{background:var(--acc);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
+.mq div{display:inline-block;padding:10px 0;animation:mq 28s linear infinite;font:700 15px 'Bricolage Grotesque'}
+.mq span{margin:0 26px}
+@keyframes mq{to{transform:translateX(-50%)}}
