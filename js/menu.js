@@ -55,7 +55,7 @@ const M = {
 
 let cat = 'Kopi';
 const rp = (n) => 'Rp ' + n.toFixed(0) + '.000';
-const wa = (n) => `https://wa.me/${WA}?text=${encodeURIComponent('Halo Teduh Kopi, saya mau pesan ' + n)}`;
+const wa = (n) => `https://wa.me/${WA}?text=${encodeURIComponent('Halo Paku Kopi, saya mau pesan ' + n)}`;
 
 const menuImg = (m) => {
   const file =

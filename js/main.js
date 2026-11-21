@@ -144,7 +144,7 @@ if (freeCup && stampStatus) {
 
 if (promoCodeBtn) {
   promoCodeBtn.onclick = () => {
-    navigator.clipboard?.writeText('TEDUHGRATIS');
+    navigator.clipboard?.writeText('PAKUGRATIS');
     const tag = promoCodeBtn.querySelector('span');
     if (tag) {
       tag.textContent = 'Tersalin ✓';

@@ -31,7 +31,7 @@ if (rf) {
     });
 
     const msg =
-      `Halo Teduh Kopi, saya ingin reservasi meja.\n` +
+      `Halo Kopi PAKU, saya ingin reservasi meja.\n` +
       `• Nama: ${v('nama')}\n` +
       `• Tanggal: ${tgl}\n` +
       `• Jam: ${v('jam')} WIB\n` +
